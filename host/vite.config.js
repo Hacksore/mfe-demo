@@ -12,7 +12,7 @@ export default defineConfig({
     federation({
       name: "app",
       remotes: {
-        remoteApp: `${appUrl}/asets/remoteEntry.js`,
+        remoteApp: `${appUrl}/assets/remoteEntry.js`,
       },
       shared: ["react", "react-dom"],
     }),
