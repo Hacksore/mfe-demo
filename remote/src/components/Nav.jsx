@@ -1,9 +1,19 @@
 const Nav = () => {
   return (
     <div
-      style={{ width: "100%", height: 60, background: "#000", color: "#fff" }}
+
+      style={{
+        display: "flex",
+        alignItems: "center",
+        color: "#fff",
+        height: 60,
+        fontSize: 30,
+        backgroundColor: "#000",
+        padding: 8,
+        marginBottom: 20,
+      }}
     >
-      MFE Nav 🚀
+      Nav 🚀
     </div>
   );
 };

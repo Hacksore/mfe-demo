@@ -7,16 +7,23 @@ const Nav = () => {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=100")
       .then((res) => res.json())
       .then((data) => {
-        const randomPokemon = data.results[
-          Math.floor(Math.random() * data.results.length)
-        ].name;
+        const randomPokemon =
+          data.results[Math.floor(Math.random() * data.results.length)].name;
         setPokemon(randomPokemon);
       });
-  } , []);
-
+  }, []);
 
   return (
-    <div style={{ width: 200, height: 200, backgroundColor: "lightblue" }}>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: 200,
+        height: 200,
+        backgroundColor: "gray",
+      }}
+    >
       {pokemon}
     </div>
   );
