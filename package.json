@@ -1,17 +1,18 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
-  "devDependencies": {
-    "eslint": "^8.48.0",
-    "prettier": "^3.0.3",
-    "tsconfig": "workspace:*",
-    "turbo": "latest"
-  },
-  "packageManager": "pnpm@8.6.10",
-  "name": "mfe-demo"
-}
+    "name": "react-vite",
+    "private": true,
+    "version": "1.0.0",
+    "scripts": {
+      "build": "pnpm --parallel --filter \"./**\" build",
+      "serve": "pnpm --parallel --filter \"./**\" preview",
+      "build:remotes": "pnpm --parallel --filter \"./remote\" build",
+      "serve:remotes": "pnpm --parallel --filter \"./remote\" serve",
+      "dev:hosts": "pnpm --filter \"./host\" dev",
+      "stop": "kill-port --port 5000,5001"
+    },
+    "devDependencies": {
+      "kill-port": "^2.0.1",
+      "@originjs/vite-plugin-federation": "^1.2.3"
+    }
+  }
+  
