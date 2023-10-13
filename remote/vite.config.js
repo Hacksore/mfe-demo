@@ -11,6 +11,7 @@ export default defineConfig({
       filename: "remoteEntry.js",
       exposes: {
         "./Nav": "./src/components/Nav",
+        "./Card": "./src/components/Card",
       },
       shared: ["react", "react-dom"],
     }),
