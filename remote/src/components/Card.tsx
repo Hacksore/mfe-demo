@@ -4,7 +4,7 @@ const Nav = () => {
   // use the pokeapi and get a random pokemon name
   const [pokemon, setPokemon] = useState<string>("");
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=1000")
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=100")
       .then((res) => res.json())
       .then((data) => {
         const randomPokemon = data.results[
