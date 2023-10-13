@@ -11,7 +11,7 @@ function App() {
       {/* make a tailwind grid of card */}
       <div className="flex flex-wrap gap-2">
 
-        {Array(10)
+        {Array(100)
           .fill(0)
           .map(() => (
             <Card />
