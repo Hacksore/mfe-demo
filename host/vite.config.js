@@ -2,7 +2,9 @@ import { defineConfig } from "vite";
 import federation from "@originjs/vite-plugin-federation";
 import react from "@vitejs/plugin-react";
 
-const appUrl = process.env.VERCEL_URL || "localhost:5001";
+const appUrl = process.env.VERCEL_ENV
+  ? "https://mfe-nav.vercel.app"
+  : "http://localhost:5001";
 
 export default defineConfig({
   plugins: [
